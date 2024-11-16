@@ -9,7 +9,6 @@
     "vite-plugin-static-copy": "^2.1.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d ."
   }
 }
