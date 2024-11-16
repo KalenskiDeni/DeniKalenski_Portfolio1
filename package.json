@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "swiper": "^11.1.12"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}
+
+

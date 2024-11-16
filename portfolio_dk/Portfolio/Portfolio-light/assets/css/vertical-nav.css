@@ -1,0 +1,151 @@
+/* Default vertical-nav styles */
+.vertical-nav {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.vertical-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    position: relative;
+}
+
+.vertical-nav ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    width: 2px;
+}
+
+.vertical-nav li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.vertical-nav a {
+    text-decoration: none !important;
+    color: #555; /* Default text color */
+    font-size: 16px;
+    position: relative;
+    padding-left: 30px;
+    display: block;
+    transition: color 0.3s ease, font-size 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.vertical-nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: white; /* Default dot color */
+    border: 2px solid #9EAD62; /* Default stroke color */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Remove hover effect */
+.vertical-nav a:hover {
+    color: inherit; /* No color change on hover */
+    background-color: transparent; /* No background color change on hover */
+}
+
+/* Active State */
+.vertical-nav a.active {
+    font-size: 18px; /* Larger font-size for active state */
+    font-weight: bold;
+}
+
+.vertical-nav a.active::before {
+    border: 2px solid transparent; /* Remove stroke for active dot */
+    transform: scale(2); /* Enlarge active dot */
+}
+
+/* Styles for Project 1 */
+.vertical-nav.project1 ul::before {
+    background-color: #9EAD62; /* Light green line for Project 1 */
+}
+
+.vertical-nav.project1 a::before {
+    border: 2px solid #9EAD62; /* Default dot color for Project 1 */
+}
+
+.vertical-nav.project1 a.active {
+    color: #9EAD62; /* Active link color for Project 1 */
+}
+
+.vertical-nav.project1 a.active::before {
+    background-color: #9EAD62; /* Active dot color for Project 1 */
+}
+
+/* Styles for Project 2 */
+.vertical-nav.project2 ul::before {
+    background-color: #00d082; /* Teal line for Project 2 */
+}
+
+.vertical-nav.project2 a::before {
+    border: 2px solid #00d082; /* Default dot color for Project 2 */
+}
+
+.vertical-nav.project2 a.active {
+    color: #00d082; /* Active link color for Project 2 */
+}
+
+.vertical-nav.project2 a.active::before {
+    background-color: #00d082; /* Active dot color for Project 2 */
+}
+
+/* Styles for Project 3 */
+.vertical-nav.project3 ul::before {
+    background-color: #527B1E; /* Green line for Project 3 */
+}
+
+.vertical-nav.project3 a::before {
+    border: 2px solid #527B1E; /* Default dot color for Project 3 */
+}
+
+.vertical-nav.project3 a.active {
+    color: #527B1E; /* Active link color for Project 3 */
+}
+
+.vertical-nav.project3 a.active::before {
+    background-color: #527B1E; /* Active dot color for Project 3 */
+}
+
+/* Styles for Project 4 */
+.vertical-nav.project4 ul::before {
+    background-color: #3A6397; /* Blue line for Project 4 */
+}
+
+.vertical-nav.project4 a::before {
+    border: 2px solid #3A6397; /* Default dot color for Project 4 */
+}
+
+.vertical-nav.project4 a.active {
+    color: #3A6397; /* Active link color for Project 4 */
+}
+
+.vertical-nav.project4 a.active::before {
+    background-color: #3A6397; /* Active dot color for Project 4 */
+}
+
+/* Additional Styles if Needed */
+.vertical-nav.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when hidden */
+    transform: translateY(-50%) translateX(-100px); /* Move out of view */
+}
+
+@media (max-width: 768px) {
+    .vertical-nav {
+        display: none; /* Hide the navigation bar on small screens */
+    }
+}
